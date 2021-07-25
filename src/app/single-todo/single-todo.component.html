@@ -1,0 +1,12 @@
+<p>single-todo works!</p>
+
+<h1 *ngIf="todo">{{todo | json}}</h1>
+<h1 *ngIf="!todo">{{error}}</h1>
+
+<div *ngIf="todo" class="card" style="width: 18rem;">
+  <img src={{todo.image}} class="card-img-top" alt="pomme">
+  <div class="card-body">
+    <h5 class="card-title">{{todo.nom}}</h5>
+    <a routerLink="/todo" class="btn btn-primary">Retour à la liste</a>
+  </div>
+</div>

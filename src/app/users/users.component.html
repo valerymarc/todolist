@@ -1,0 +1,13 @@
+<p>users works!</p>
+<a class="btn btn-success mt-2" routerLink="/add-user">Nouvel utilisateur</a>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let user of listUsers">
+    <p>Prénom : {{user.prenom}}</p>
+    <p>Nom : {{user.nomfamille}}</p>
+    <p *ngFor="let alias of user.aliases">Alias : <strong>{{alias}}</strong></p>
+    <p>Description: {{user.description}}</p>
+  </li>
+
+</ul>
+

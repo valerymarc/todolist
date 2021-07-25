@@ -1,0 +1,30 @@
+<div class="row">
+  <h1 class="display-4 text-center">Ajouter une nouvelle tâche à réaliser</h1>
+  <div class="col-md-6">
+
+    <form #addTodoForm="ngForm">
+      <div class="form-group">
+        <label for="">Nom de la tâche : </label>
+        <input class="form-control m-1" name="nom" type="text"  [(ngModel)]="todo.nom" required/>
+      </div>
+      <div class="form-group">
+        <label for="">Description de la tâche : </label>
+        <textarea class="form-control m-1" name="description" id="description" [(ngModel)]="todo.description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="">URL de l'image: </label>
+        <input class="form-control m-1" name="image" type="text" [(ngModel)]="todo.image" required/>
+
+      </div>
+      <div class="form-group">
+        <label for="">Etat de la tâche : </label>
+        <select class="form-control m-1" name="status" [(ngModel)]="todo.status" required>
+          <option value="true">En cours</option>
+          <option value="false">Terminé</option>
+        </select>
+      </div>
+      <button [disabled]="!addTodoForm.valid"  (click)="onSubmit()" class="btn btn-success btn-lg">Ajouter</button>
+    </form>
+  </div>
+</div>
+
